@@ -113,8 +113,4 @@ const setPlayVideo = () => {
     <span>Play Video</span>
   `
     document.querySelector('.main__video_button').innerHTML = html;
-<<<<<<< HEAD
 }  
-=======
-} 
->>>>>>> ed10c9f708f5d670c057c4eb90137be33f834c06

@@ -8,10 +8,5 @@ $dBName = getenv("DB_NAME") ?: "mentis";
 $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 
 if (!$conn){
-<<<<<<< HEAD
     die("Conexão falhou: " . mysqli_connect_error());}
-=======
-    die("Conexão falhou: " . mysqli_connect_error());
-}
->>>>>>> ed10c9f708f5d670c057c4eb90137be33f834c06
 ?>
