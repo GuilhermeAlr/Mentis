@@ -167,14 +167,6 @@
                                 <label for="floatingInputGrid">Hora:<span class="text-danger">*</span></label>
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <div class="form-floating">
-                                <input type="text" name="link" class="form-control" id="floatingInputGrid"
-                                    placeholder="insira o link" required>
-                                <label for="floatingInputGrid">Link da consulta:<span
-                                        class="text-danger">*</span></label>
-                            </div>
-                        </div>
                         <div>
                             <div class="form-floating">
                                 <input type="hidden" name="id" value="<?php echo $row['IDPsicologo']; ?>"
