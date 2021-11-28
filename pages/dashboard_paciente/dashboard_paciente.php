@@ -87,7 +87,7 @@
                         <th scope="col">ID</th>
                         <th scope="col">Dia</th>
                         <th scope="col">Hora</th>
-                        <th scope="col">Nome</th>
+                        <th scope="col">Vai la</th>
                         <th scope="col">Email</th>
                         <th scope="col">Sexo</th>
                         <th scope="col">Idade</th>
