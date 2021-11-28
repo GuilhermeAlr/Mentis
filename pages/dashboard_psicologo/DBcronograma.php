@@ -83,6 +83,7 @@
                             <th scope="col">Data</th>
                             <th scope="col">Horário</th>
                             <th scope="col">Excluir</th>
+                            <th scope="col">ver</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -101,6 +102,10 @@
                             <td><a name="del_horario" type="submit"
                                     href="delete_horario.php?id_excluir=<?php echo $data['IDadd_horario'];?>"
                                     class="btn btn-outline-danger fw-bold"> Excluir</a>
+                            </td>
+                            <td><a name="consult" type="submit"
+                                    href="https://mentis-app.herokuapp.com/pages/conferencia.php?roomId=<?php echo $data['IDadd_horario'];?>"
+                                    class="btn btn-outline-danger fw-bold"> consultar</a>
                             </td>
                         </tr>
                         <?php
@@ -166,7 +171,8 @@
                             <div class="form-floating">
                                 <input type="text" name="link" class="form-control" id="floatingInputGrid"
                                     placeholder="insira o link" required>
-                                <label for="floatingInputGrid">Link da consulta:<span class="text-danger">*</span></label>
+                                <label for="floatingInputGrid">Link da consulta:<span
+                                        class="text-danger">*</span></label>
                             </div>
                         </div>
                         <div>
