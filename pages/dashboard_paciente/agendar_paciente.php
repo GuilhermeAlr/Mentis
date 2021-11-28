@@ -11,10 +11,9 @@ if(isset($_POST["agendar"])){
     $email_psi = $_POST["email_psi"];
     $dia_c = $_POST["dia_c"];
     $hora_c = $_POST["hora_c"];
-    $link_c = $_POST["link_c"];
 
     $query= "INSERT INTO consulta (IDPsicologo_c, IDPaciente_c, IDHorario, nomePsicologo_c, emailPsicologo_c,
-     dia_c, hora_c, link_c) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+     dia_c, hora_c) VALUES (?, ?, ?, ?, ?, ?, ?);";
     //$queryy= "UPDATE adicionar_horario SET disponibilidade = 'Indisponível' WHERE IDadd_horario = '$id';"
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $query)){
@@ -22,7 +21,7 @@ if(isset($_POST["agendar"])){
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "ssssssss",  $id_psi, $id_pa, $id_hora, $nome_psi, $email_psi, $dia_c, $hora_c, $link_c);
+    mysqli_stmt_bind_param($stmt, "sssssss",  $id_psi, $id_pa, $id_hora, $nome_psi, $email_psi, $dia_c, $hora_c);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: dashboard_paciente.php?error=none");
@@ -71,7 +70,7 @@ if(isset($_POST["agendar"])){
                         $sql = "select (YEAR(CURDATE()) - YEAR(nascimentoPsicologo)) - 
                         (right(CURDATE(),5) < right(nascimentoPsicologo,5)) as idade, i.IDPsicologo,
                          i.nomePsicologo, i.emailPsicologo, i.sexoPsicologo, i.nascimentoPsicologo, 
-                         h.dia, h.hora, h.IDadd_horario, h.link from psicologo as i JOIN adicionar_horario as h on 
+                         h.dia, h.hora, h.IDadd_horario from psicologo as i JOIN adicionar_horario as h on 
                          i.IDPsicologo = h.Ref_IDPsicologo WHERE IDadd_horario = '$id';";
                         $rs = mysqli_query($conn, $sql);
                         
@@ -95,13 +94,6 @@ if(isset($_POST["agendar"])){
                     <div class="mb-3">
                         <div class="form-floating">
                             <input type="hidden" name="dia_c" class="form-control" value="<?php echo $row['dia']; ?>"
-                                id="floatingInputGrid" placeholder="insira seu email" required>
-                            <label for="floatingInputGrid"></label>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-floating">
-                            <input type="hidden" name="link_c" class="form-control" value="<?php echo $row['link']; ?>"
                                 id="floatingInputGrid" placeholder="insira seu email" required>
                             <label for="floatingInputGrid"></label>
                         </div>
