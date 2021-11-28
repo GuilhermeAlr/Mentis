@@ -1,6 +1,6 @@
 // const socket = io('http://127.0.0.1:3333')
 
-const socket = io('https://mentis-help-socket-server.herokuapp.com/', { secure: true })
+const socket = io('https://mentis-socket-server.herokuapp.com/', { secure: true })
 
 const videoGrid = document.getElementById('video-grid')
 
