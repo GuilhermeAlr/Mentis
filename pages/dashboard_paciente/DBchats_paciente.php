@@ -74,6 +74,7 @@
                         <th scope="col">Email</th>
                         <th scope="col">Dia</th>
                         <th scope="col">Hora</th>
+                        <th scope="col">Link</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -87,6 +88,7 @@
                         <td><?=  $row["emailPsicologo_c"] ?></td>
                         <td><?=  $row["dia_c"] ?></td>
                         <td><?=  $row["hora_c"] ?></td>
+                        <td><?=  $row["link_c"] ?></td>
                     </tr>
                     <?php
                         }

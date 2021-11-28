@@ -100,7 +100,7 @@
                         class="btn section-btn2 navbar-font">Cadastrar</button>
                     <div class="container text-center">
                         <div>
-                            <p>Já possui uma conta? clique abaixo para logar!</p>
+                            <p>Já possui uma conta? Clique abaixo para logar!</p>
                             <a href="login.php" class="btn section-btn2 navbar-font">Login</a>
                         </div>
                     </div>
@@ -124,5 +124,5 @@ toggleButton.onclick = function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 <script type="text/javascript">
 $("#cpf_mascara").mask("000.000.000-00");
-$("#crp_mascara").mask("00/0000");
+$("#crp_mascara").mask("00/000000");
 </script>

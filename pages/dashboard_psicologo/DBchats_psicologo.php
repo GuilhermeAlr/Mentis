@@ -40,11 +40,6 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item me-2">
-                                <a class="nav-link" href="dashboard_psicologo.php"><i class="bi bi-house"></i>
-                                    Área do
-                                    Psicólogo</a>
-                            </li>
-                            <li class="nav-item me-2">
                                 <a class="nav-link" href="DBcronograma.php"><i class="bi bi-calendar-event"></i> Cronograma</a>
                             </li>
                             <li class="nav-item me-2">

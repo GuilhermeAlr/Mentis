@@ -44,9 +44,6 @@
                             <a class="nav-link" href="#quem">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://sheltered-escarpment-26956.herokuapp.com/">Teste</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="pages/health_pages/saude_mental.php">Saúde Mental</a>
                         </li>
                     </ul>
