@@ -58,33 +58,18 @@ if(isset($_POST["agendar"])){
                         <thead class="table-light">
                             <tr>
                                 <th scope="col">Dia</th>
-                                <th scope="col">Hora</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Sexo</th>
-                                <th scope="col">Idade</th>
+
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                        $sql = "select (YEAR(CURDATE()) - YEAR(nascimentoPsicologo)) - 
-                        (right(CURDATE(),5) < right(nascimentoPsicologo,5)) as idade, i.IDPsicologo,
-                         i.nomePsicologo, i.emailPsicologo, i.sexoPsicologo, i.nascimentoPsicologo, 
-                         h.dia, h.hora, h.IDadd_horario from psicologo as i JOIN adicionar_horario as h on 
-                         i.IDPsicologo = h.Ref_IDPsicologo WHERE IDadd_horario = '$id';";
+                        $sql = "select dia from adicionar_horario WHERE IDadd_horario = '$id';";
                         $rs = mysqli_query($conn, $sql);
                         
                         while($row = mysqli_fetch_assoc($rs)){
                         ?>
                             <tr>
-                                <td class="d-none"><?=  $row["IDadd_horario"] ?></td>
-                                <td class="d-none"><?=  $row["IDPsicologo"] ?></td>
                                 <td><?=  $row["dia"] ?></td>
-                                <td><?=  $row["hora"] ?></td>
-                                <td><?=  $row["nomePsicologo"] ?></td>
-                                <td><?=  $row["emailPsicologo"] ?></td>
-                                <td><?=  $row["sexoPsicologo"] ?></td>
-                                <td><?=  $row["idade"] ?></td>
                             </tr>
 
                         </tbody>
