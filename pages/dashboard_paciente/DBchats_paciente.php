@@ -71,6 +71,7 @@
                 <thead class="table-light">
                     <tr>
                         <th scope="col">Psicólogo</th>
+                        <th scope="col">Psicólogo</th>
                         <th scope="col">Email</th>
                         <th scope="col">Dia</th>
                         <th scope="col">Hora</th>
@@ -84,11 +85,15 @@
                         while($row = mysqli_fetch_assoc($rs)){
                         ?>
                     <tr>
+                        <td><?=  $row["IDHorario"] ?></td>
                         <td><?=  $row["nomePsicologo_c"] ?></td>
                         <td><?=  $row["emailPsicologo_c"] ?></td>
                         <td><?=  $row["dia_c"] ?></td>
                         <td><?=  $row["hora_c"] ?></td>
-                        <td><?=  $row["link_c"] ?></td>
+                        <td><a name="consult" type="submit"
+                                    href="https://mentis-app.herokuapp.com/pages/conferencia.php?roomId=<?php echo $row["IDHorario"];?>"
+                                    class="btn btn-outline-danger fw-bold"> consultar</a>
+                            </td>
                     </tr>
                     <?php
                         }
