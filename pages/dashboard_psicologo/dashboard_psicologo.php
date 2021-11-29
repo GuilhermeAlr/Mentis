@@ -76,21 +76,25 @@
                         <th scope="col">Email</th>
                         <th scope="col">Dia</th>
                         <th scope="col">Hora</th>
-                        <th scope="col">Link</th>
+                        <th scope="col">Consulta</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                        $sql = "select a.nomePaciente, a.emailPaciente, c.dia_c, c.hora_c, c.link_c from paciente as a JOIN consulta as c on IDPaciente = IDPaciente_c WHERE IDPsicologo_c = '$currentUser' ORDER by dia_c;";
+                        $sql = "select a.nomePaciente, a.emailPaciente, c.IDHorario, c.dia_c, c.hora_c from paciente as a JOIN consulta as c on IDPaciente = IDPaciente_c WHERE IDPsicologo_c = '$currentUser' ORDER by dia_c;";
                         $rs = mysqli_query($conn, $sql);
                         while($row = mysqli_fetch_assoc($rs)){
                         ?>
                     <tr>
+                        <td class="d-none"><?=  $row["IDHorario"] ?></td>
                         <td><?=  $row["nomePaciente"] ?></td>
                         <td><?=  $row["emailPaciente"] ?></td>
                         <td><?=  $row["dia_c"] ?></td>
                         <td><?=  $row["hora_c"] ?></td>
-                        <td><?=  $row["link_c"] ?></td>
+                        <td><a name="consult" type="submit"
+                                    href="https://mentis-app.herokuapp.com/pages/conferencia.php?roomId=<?php echo $row["IDHorario"];?>"
+                                    class="btn btn-outline-danger fw-bold"> Consultar</a>
+                            </td>
                     </tr>
                     <?php
                         }

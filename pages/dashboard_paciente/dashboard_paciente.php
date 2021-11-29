@@ -87,7 +87,7 @@
                         <th scope="col">ID</th>
                         <th scope="col">Dia</th>
                         <th scope="col">Hora</th>
-                        <th scope="col">Vai la</th>
+                        <th scope="col">Nome</th>
                         <th scope="col">Email</th>
                         <th scope="col">Sexo</th>
                         <th scope="col">Idade</th>
@@ -96,7 +96,7 @@
                 </thead>
                 <tbody>
                     <?php
-                        $sql = "select (YEAR(CURDATE()) - YEAR(nascimentoPsicologo)) - (right(CURDATE(),5) < right(nascimentoPsicologo,5)) as idade, i.nomePsicologo, i.emailPsicologo, i.sexoPsicologo, i.nascimentoPsicologo, h.dia, h.hora, h.IDadd_horario from psicologo as i JOIN adicionar_horario as h on i.IDPsicologo = h.Ref_IDPsicologo WHERE disponibilidade = 'Disponível' ORDER by dia;";
+                        $sql = "select (YEAR(CURDATE()) - YEAR(nascimentoPsicologo)) - (right(CURDATE(),5) < right(nascimentoPsicologo,5)) as idade, i.nomePsicologo, i.emailPsicologo, i.sexoPsicologo, i.nascimentoPsicologo, h.dia, h.hora, h.IDadd_horario from psicologo as i JOIN adicionar_horario as h on i.IDPsicologo = h.Ref_IDPsicologo WHERE disponibilidade = 'Disponivel' ORDER by dia;";
                         $rs = mysqli_query($conn, $sql);
                         while($row = mysqli_fetch_assoc($rs)){
                         ?>

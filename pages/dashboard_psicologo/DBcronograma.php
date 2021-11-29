@@ -103,10 +103,7 @@
                                     href="delete_horario.php?id_excluir=<?php echo $data['IDadd_horario'];?>"
                                     class="btn btn-outline-danger fw-bold"> Excluir</a>
                             </td>
-                            <td><a name="consult" type="submit"
-                                    href="https://mentis-app.herokuapp.com/pages/conferencia.php?roomId=<?php echo $data['IDadd_horario'];?>"
-                                    class="btn btn-outline-danger fw-bold"> consultar</a>
-                            </td>
+
                         </tr>
                         <?php
                                     }
