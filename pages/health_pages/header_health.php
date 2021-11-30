@@ -38,13 +38,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../../index.php">Início</a>
+                            <a class="nav-link" aria-current="page" href="../../index.php">Início</a>
                         </li>
-                        <li class="nav-item">
+                        <!--<li class="nav-item">
                             <a class="nav-link" href="../../index.php#quem">Sobre</a>
-                        </li>
+                        </li>-->
                         <li class="nav-item">
-                            <a class="nav-link" href="saude_mental.php">Saúde Mental</a>
+                            <a class="nav-link active" href="saude_mental.php">Saúde Mental</a>
                         </li>
                     </ul>
                     <?php

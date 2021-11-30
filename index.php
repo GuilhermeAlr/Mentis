@@ -40,9 +40,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.php">Início</a>
                         </li>
-                        <li class="nav-item">
+                        <!--<li class="nav-item">
                             <a class="nav-link" href="#quem">Sobre</a>
-                        </li>
+                        </li>-->
                         <li class="nav-item">
                             <a class="nav-link" href="pages/health_pages/saude_mental.php">Saúde Mental</a>
                         </li>
@@ -80,12 +80,12 @@
                     jovens que estejam se sentindo abalados psicologicamente e queiram receber auxílio de profissionais
                     da saúde, assim podendo se consultar com esses psicólogos dentro da plataforma através dos recursos
                     de chats e chamadas de vídeo. </p>
-                <a href="#funciona" class="btn btn-lg mb-3 btn-showcase text-light" type="submit">Começar</a>
+                <a href="pages/cadastrar.php" class="btn btn-lg mb-3 btn-showcase text-light" type="submit">Começar</a>
             </div>
             <img class="img-fluid d-none d-md-block" width="560" height="560" src="resources/mental.png" alt="">
         </div>
     </section>
-    <!-- Como Funciona  -->
+    <!-- Como Funciona
     <section id="funciona" class="section-color pt-5 pb-5">
         <div class="container">
             <div class="row align-items-center justify-content-between">
@@ -103,7 +103,7 @@
                 </div>
             </div>
     </section>
-    <!-- Quem Somos -->
+    Quem Somos
     <section id="quem" class="pt-5 pb-5">
         <div class="container">
             <div class="row align-items-center justify-content-between">
@@ -124,7 +124,7 @@
             </div>
         </div>
     </section>
-    <!-- Advantages
+     Advantages
     <section class="pt-5 pb-5" style="background-color: #96CDD1;">
         <div class="container">
             <div id="carouselExampleControls" class="carousel slide text-center text-light" data-bs-ride="carousel">
@@ -199,11 +199,11 @@
             </div>
         </div>
     </section>
-         -->
+         -->  
     <!-- Footer -->
-    <footer class="p-5 text-dark text-center position-relative section-color">
+    <footer class="p-4 text-dark text-center position-relative section-color">
         <div class="container">
-            <p>Copyright &copy; 2021 Mentis</p>
+            <p class="fw-bold">Copyright &copy; 2021 Mentis</p>
         </div>
     </footer>
     <!-- Option 1: Bootstrap Bundle with Popper -->

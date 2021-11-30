@@ -47,9 +47,9 @@
 </div>
 
 <!-- Footer -->
-<footer class="p-5 text-dark text-center position-relative section-color">
+<footer class="p-4 text-dark text-center position-relative section-color">
     <div class="container">
-        <p>Copyright &copy; 2021 Mentis</p>
+        <p class="fw-bold">Copyright &copy; 2021 Mentis</p>
     </div>
 </footer>
 <!-- Option 1: Bootstrap Bundle with Popper -->

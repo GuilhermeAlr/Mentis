@@ -68,15 +68,15 @@
 
     <div class="container">
         <h3 class="navbar-font fs-3 mt-5">Consultas</h3>
-        <div class="time-table pt-4">
+        <div class="time-table rounded pt-4">
             <table class="table table-hover text-center">
                 <thead class="table-light">
                     <tr>
                         <th scope="col">Paciente</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Dia</th>
-                        <th scope="col">Hora</th>
-                        <th scope="col">Consulta</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Horário</th>
+                        <th scope="col">Consultar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -92,9 +92,9 @@
                         <td><?=  $row["dia_c"] ?></td>
                         <td><?=  $row["hora_c"] ?></td>
                         <td><a name="consult" type="submit"
-                                    href="https://mentis-app.herokuapp.com/pages/conferencia.php?roomId=<?php echo $row["IDHorario"];?>"
-                                    class="btn btn-outline-danger fw-bold"> Consultar</a>
-                            </td>
+                                href="https://mentis-app.herokuapp.com/pages/conferencia.php?roomId=<?php echo $row["IDHorario"];?>"
+                                class="btn section-btn2 fw-bold"> Consultar</a>
+                        </td>
                     </tr>
                     <?php
                         }

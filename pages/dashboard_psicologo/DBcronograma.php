@@ -79,11 +79,10 @@
                 <table class="table table-hover text-center">
                     <thead class="table-light">
                         <tr>
-                            <th scope="col">ID</th>
+                            <th class="d-none" scope="col">ID</th>
                             <th scope="col">Data</th>
                             <th scope="col">Horário</th>
                             <th scope="col">Excluir</th>
-                            <th scope="col">ver</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -96,7 +95,7 @@
                             while($data = mysqli_fetch_assoc($rs)){
                         ?>
                         <tr>
-                            <td><?=$data["IDadd_horario"]?></td>
+                            <td class="d-none"><?=$data["IDadd_horario"]?></td>
                             <td><?=$data["dia"] ?></td>
                             <td><?=$data["hora"] ?></td>
                             <td><a name="del_horario" type="submit"
@@ -112,22 +111,6 @@
                 </table>
             </div>
         </div>
-
-        <nav aria-label="Páginas">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </div>
 
     <!-- MODAL 1 -->

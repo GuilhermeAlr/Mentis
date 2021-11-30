@@ -1,5 +1,5 @@
 <?php
-include_once 'header.php'
+include_once 'header2.php'
 ?>
 <style>
 #video-grid {
@@ -9,14 +9,14 @@ include_once 'header.php'
 }
 
 video {
-    height: 300px;
-    width: 400px;
+    height: 400px;
+    width: 500px;
     object-fit: cover;
     padding: 8px;
 }
 
 .main {
-    height: 100vh;
+    height: 80vh;
     display: flex;
 }
 
@@ -32,7 +32,8 @@ video {
 
 .main__videos {
     flex-grow: 1;
-    background-color: black;
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +41,7 @@ video {
 }
 
 .main__controls {
-    background-color: #1C1E20;
+    background-color: whitesmoke;
 }
 
 .main__right {
@@ -49,7 +50,7 @@ video {
 }
 
 .main__controls {
-    color: #D2D2D2;
+    color: black;
     display: flex;
     justify-content: space-between;
     padding: 5px;
@@ -69,8 +70,18 @@ video {
     cursor: pointer;
 }
 
+.main__controls__button-sair {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 80px;
+    cursor: pointer;
+}
+
 .main__controls__button:hover {
-    background-color: #343434;
+    background-color: rgba(151, 206, 209, 0.3);;
     border-radius: 5px;
 }
 
@@ -135,11 +146,14 @@ video {
                     <div class="main__controls__block">
                         <div onclick="muteUnmute()" class="main__controls__button main__mute_button">
                             <i class="fas fa-microphone"></i>
-                            <span>Mute</span>
+                            <span>Desligar microfone</span>
                         </div>
                         <div onclick="playStop()" class="main__controls__button main__video_button">
                             <i class="fas fa-video"></i>
-                            <span>Stop Video</span>
+                            <span>Desligar câmera</span>
+                        </div>
+                        <div class="main__controls__button-sair">
+                            <a class="btn btn-outline-danger ms-5" href="../index.php">Sair</a>
                         </div>
                     </div>
                 </div>

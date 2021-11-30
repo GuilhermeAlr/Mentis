@@ -48,26 +48,6 @@
                             <a class="nav-link" href="health_pages/saude_mental.php">Saúde Mental</a>
                         </li>
                     </ul>
-                    <?php
-                        if(isset($_SESSION["idpaciente"])){
-                            echo "<form class='d-flex'>";
-                            echo "<a href='dashboard_paciente/dashboard_paciente.php' class='navbar-font btn me-2 section-btn2' type='button'><i class='bi bi-arrow-return-right'></i> Área do Paciente</a>";
-                            echo "<a href='includes/logout_inc.php' class='navbar-font btn navbar-login_sair' type='button'>Sair</a>";
-                            echo "</form>";
-                        }
-                        else if(isset($_SESSION["idpsicologo"])){
-                            echo "<form class='d-flex'>";
-                            echo "<a href='dashboard_psicologo/dashboard_psicologo.php' class='navbar-font btn me-2 section-btn2' type='button'><i class='bi bi-arrow-return-right'></i> Área do Psicólogo</a>";
-                            echo  "<a href='includes/logout_inc.php' class='navbar-font btn navbar-login_sair' type='button'>Sair</a>";
-                            echo "</form>";
-                        }
-                        else{
-                            echo "<form class='d-flex'>";
-                            echo "<a href='cadastrar.php' class='navbar-font btn me-2 section-btn2' type='button'><i class='bi bi-arrow-return-right'></i> Cadastrar</a>";
-                            echo "<a href='login.php' class='navbar-font btn navbar-login_sair' type='button'>Login</a>";
-                            echo "</form>";
-                        }
-                    ?>
                 </div>
             </div>
         </nav>
